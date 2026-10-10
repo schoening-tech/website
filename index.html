@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schöning Tech – Software Development & AI Consulting</title>
+<meta name="description" content="Software developer with nearly 15 years of automotive experience (incl. ADAS). I build scalable platforms, enable teams, create my own apps and games, and help companies adopt AI-assisted development.">
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="de" href="de.html">
+<style>
+  :root {
+    --bg: #fafaf7;
+    --ink: #111110;
+    --muted: #6b6b66;
+    --line: #dcdcd5;
+    --accent: #ff4a1c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e0e0d;
+      --ink: #f2f2ee;
+      --muted: #8d8d86;
+      --line: #2a2a27;
+      --accent: #ff6a3d;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Inter, "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+
+  header.top {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 28px 0; font-size: 15px;
+  }
+  header.top .name { font-weight: 600; letter-spacing: -0.01em; }
+  header.top a.cta {
+    text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px;
+  }
+  header.top a.cta:hover { color: var(--accent); border-color: var(--accent); }
+  header.top .right { display: flex; align-items: center; gap: 24px; }
+  .lang { color: var(--muted); font-size: 14px; letter-spacing: 0.08em; }
+  .lang a { text-decoration: none; }
+  .lang a:hover { color: var(--ink); }
+  .lang .on { color: var(--ink); font-weight: 600; }
+
+  .hero { padding: 12vh 0 14vh; }
+  .eyebrow {
+    font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-size: clamp(2.6rem, 7.5vw, 5.6rem);
+    line-height: 1.02; letter-spacing: -0.04em; font-weight: 700;
+  }
+  .hero h1 em { font-style: normal; color: var(--accent); }
+  .hero p.lead {
+    margin-top: 36px; max-width: 34em; font-size: 1.2rem; color: var(--muted);
+  }
+  .hero p.lead strong { color: var(--ink); font-weight: 500; }
+
+  section { border-top: 1px solid var(--line); padding: 72px 0; }
+  .grid { display: grid; grid-template-columns: 200px 1fr; gap: 40px; }
+  .label {
+    font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+    padding-top: 6px;
+  }
+  .content p + p { margin-top: 1.2em; }
+  .content p { max-width: 36em; }
+  .content .big { font-size: 1.5rem; line-height: 1.4; letter-spacing: -0.02em; max-width: 26em; }
+
+  .steps { list-style: none; margin-top: 36px; }
+  .steps li {
+    display: grid; grid-template-columns: 56px 1fr; gap: 8px;
+    padding: 22px 0; border-top: 1px solid var(--line);
+  }
+  .steps li:last-child { border-bottom: 1px solid var(--line); }
+  .steps .num { color: var(--accent); font-weight: 600; font-variant-numeric: tabular-nums; }
+  .steps h3 { font-size: 1.15rem; letter-spacing: -0.01em; }
+  .steps p { color: var(--muted); font-size: 1rem; margin-top: 4px; }
+
+  .products { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-top: 28px; }
+  .card {
+    border: 1px solid var(--line); border-radius: 4px; padding: 22px;
+    text-decoration: none; transition: border-color .15s, transform .15s;
+  }
+  .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .soon {
+    margin-top: 28px; padding: 28px 22px; border: 1px dashed var(--line); border-radius: 4px;
+    display: flex; align-items: center; gap: 14px;
+    font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+  }
+  .soon::before {
+    content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex: none;
+  }
+  .card h3 { font-size: 1.05rem; }
+  .card p { color: var(--muted); font-size: 0.95rem; margin-top: 6px; }
+  .card .tag { display: inline-block; margin-top: 14px; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+
+  .contact-link {
+    display: inline-block; margin-top: 8px;
+    font-size: clamp(1.6rem, 4.5vw, 2.8rem); letter-spacing: -0.03em; font-weight: 600;
+    text-decoration: none; border-bottom: 2px solid var(--accent); padding-bottom: 4px;
+  }
+  .contact-link:hover { color: var(--accent); }
+  .links { margin-top: 28px; display: flex; gap: 24px; flex-wrap: wrap; font-size: 16px; color: var(--muted); }
+  .links a { text-decoration: none; border-bottom: 1px solid var(--line); }
+  .links a:hover { color: var(--ink); border-color: var(--ink); }
+
+  footer { border-top: 1px solid var(--line); padding: 28px 0 48px; font-size: 14px; color: var(--muted); }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+  @media (max-width: 720px) {
+    body { font-size: 17px; }
+    .grid { grid-template-columns: 1fr; gap: 16px; }
+    section { padding: 56px 0; }
+    .hero { padding: 8vh 0 10vh; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <span class="name">Schöning Tech</span>
+    <div class="right">
+      <span class="lang"><span class="on">EN</span> / <a href="de.html" hreflang="de" lang="de">DE</a></span>
+      <a class="cta" href="#contact">Get in touch</a>
+    </div>
+  </header>
+
+  <div class="hero">
+    <p class="eyebrow">Software Development &amp; AI Consulting</p>
+    <h1>I build software.<br>I help teams build it <em>with AI.</em></h1>
+    <p class="lead">
+      Nearly 15 years of automotive software experience, building scalable platforms and enabling teams.
+      A passion for clean code and a practical approach to AI-assisted development.
+      <strong>No hype.</strong>
+    </p>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap grid">
+    <div class="label">About</div>
+    <div class="content">
+      <p class="big">I love software. I build it out of passion, and I always have.</p>
+      <p>Clean code has been my principle from the start: software should be readable, maintainable and built with care.</p>
+      <p>For nearly 15 years, I've worked in the automotive industry, including ADAS. My focus was on scalable solutions, building platforms, and enabling other teams to build on them. That experience shapes how I work today: reliable software, solid foundations, and teams that can move fast.</p>
+      <p>With AI, entirely new paths have opened up for how software gets built. I've embraced them, and I now help companies do the same.</p>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="wrap grid">
+    <div class="label">My Products</div>
+    <div class="content">
+      <p>I develop and publish my own applications and games, distributed through digital platforms.</p>
+      <!-- TODO: When the first product is ready, replace the "Coming soon" box with product cards:
+      <div class="products">
+        <a class="card" href="#">
+          <h3>Product name</h3>
+          <p>One sentence about what it is and who it's for.</p>
+          <span class="tag">App · Platform</span>
+        </a>
+      </div> -->
+      <div class="soon">Coming soon</div>
+    </div>
+  </div>
+</section>
+
+<section id="consulting">
+  <div class="wrap grid">
+    <div class="label">AI Consulting</div>
+    <div class="content">
+      <p class="big">AI only creates value when it holds up in real-world engineering.</p>
+      <p>After nearly 15 years of building scalable platforms and enabling teams in automotive, I know what it takes to make new technology work in practice. I apply that to introducing AI into your development process, from first assessment to working implementation.</p>
+      <ol class="steps">
+        <li>
+          <span class="num">01</span>
+          <div>
+            <h3>Assess</h3>
+            <p>Where does AI create real value in your workflows, and where doesn't it?</p>
+          </div>
+        </li>
+        <li>
+          <span class="num">02</span>
+          <div>
+            <h3>Select</h3>
+            <p>Which tools and models fit your needs, your stack and your budget?</p>
+          </div>
+        </li>
+        <li>
+          <span class="num">03</span>
+          <div>
+            <h3>Integrate</h3>
+            <p>Bringing the chosen setup into your existing teams and processes, until it works in daily practice.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="approach">
+  <div class="wrap grid">
+    <div class="label">How I work</div>
+    <div class="content">
+      <p class="big">Practical instead of theoretical.</p>
+      <p>I work hands-on with your team, focus on measurable benefit, and skip the hype.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap grid">
+    <div class="label">Contact</div>
+    <div class="content">
+      <p>Interested in working together?</p>
+      <a class="contact-link" href="mailto:christoph@schoening.tech">christoph@schoening.tech</a>
+      <div class="links">
+        <!-- TODO: Add LinkedIn link once available:
+        <a href="https://www.linkedin.com/in/YOUR-PROFILE">LinkedIn</a> -->
+        <a href="https://github.com/schoening-tech">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Christoph Schöning</span>
+    <span><a href="impressum.html" hreflang="de">Legal notice</a> · <a href="datenschutz.html" hreflang="de">Privacy</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Impressum – Schöning Tech</title>
+<meta name="robots" content="noindex, follow">
+<style>
+  :root {
+    --bg: #fafaf7;
+    --ink: #111110;
+    --muted: #6b6b66;
+    --line: #dcdcd5;
+    --accent: #ff4a1c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e0e0d;
+      --ink: #f2f2ee;
+      --muted: #8d8d86;
+      --line: #2a2a27;
+      --accent: #ff6a3d;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Inter, "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+  header.top { padding: 28px 0; font-size: 15px; }
+  header.top a { font-weight: 600; letter-spacing: -0.01em; text-decoration: none; }
+  header.top a:hover { color: var(--accent); }
+  main { border-top: 1px solid var(--line); padding: 56px 0 72px; }
+  main .wrap > * { max-width: 40em; }
+  h1 { font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 40px; }
+  h2 { font-size: 1.1rem; letter-spacing: -0.01em; margin: 36px 0 8px; }
+  p + p { margin-top: 0.8em; }
+  .muted { color: var(--muted); }
+  footer { border-top: 1px solid var(--line); padding: 28px 0 48px; font-size: 14px; color: var(--muted); }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top"><a href="de.html">Schöning Tech</a></header>
+</div>
+
+<main>
+  <div class="wrap">
+    <h1>Impressum</h1>
+
+    <h2>Angaben gemäß § 5 DDG</h2>
+    <p>
+      Christoph Schöning<br>
+      Schöning Tech<br>
+      Insenhausener Str. 3<br>
+      26427 Stedesdorf<br>
+      Deutschland
+    </p>
+
+    <h2>Kontakt</h2>
+    <p>
+      E-Mail: <a href="mailto:christoph@schoening.tech">christoph@schoening.tech</a><br>
+      <!-- TODO: Telefonnummer eintragen (oder ein anderes schnelles, direktes Kontaktmittel). -->
+      Telefon: [Telefonnummer]
+    </p>
+
+    <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+    <p>
+      Christoph Schöning<br>
+      Insenhausener Str. 3<br>
+      26427 Stedesdorf
+    </p>
+
+    <h2>Verbraucherstreitbeilegung</h2>
+    <p>Ich bin nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+    <h2>Haftung für Links</h2>
+    <p>Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für diese fremden Inhalte ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Links umgehend entfernen.</p>
+
+    <p class="muted" style="margin-top: 48px;"><a href="datenschutz.html">Datenschutzerklärung</a></p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Christoph Schöning</span>
+    <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
